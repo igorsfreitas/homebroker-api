@@ -29,43 +29,41 @@
 ## Installation
 
 ```bash
-$ yarn install
+$ npm install
 ```
 
 ## Running the app
 
 ```bash
 # development
-$ yarn run start
+$ npm run start
 
 # watch mode
-$ yarn run start:dev
+$ npm run start:dev
 
 # production mode
-$ yarn run start:prod
+$ npm run start:prod
 ```
 
 ## Test
 
 ```bash
 # unit tests
-$ yarn run test
+$ npm run test
 
 # e2e tests
-$ yarn run test:e2e
+$ npm run test:e2e
 
 # test coverage
-$ yarn run test:cov
+$ npm run test:cov
 ```
 
-## TypeORM Model Gen
-```bash
-# add global module
-$ npm i -g typeorm-model-generator
+## Recomended Extensions for Vscode
 
-# generate
-$ typeorm-model-generator -h localhost -d database_name -u database_user -x database_password -e postgres -o ./typegen -s public
-```
+- prisma
+- rest client
+- prettier
+- eslint
 
 ## Support
 
@@ -93,12 +91,6 @@ Nest is [MIT licensed](LICENSE).
 - ci - Utilizado quando feita uma alteração no build do CI
 - perf - Utilizado quando feita alguma alteração para melhorar na performance do sistema ou do build
 
-## To create a new migration using the cli
-
-```
-$ yarn typeorm:create src/config/database/migrations/CreateXptoTable
-```
-
 ## Rodando Localmente com Docker
 
 A step by step series of examples that tell you how to get a development env running.
@@ -106,11 +98,11 @@ A step by step series of examples that tell you how to get a development env run
 ON PROJECT FOLDER
 
 ```
-docker build . -t homebroker-api
+docker compose up -d
 ```
 
 ```
-docker run -p 8080:8080 --name homebroker-api homebroker-api
+docker compose down
 ```
 
 ## To access the swagger local documentation, run the project, then:
