@@ -105,10 +105,16 @@ docker compose up -d
 docker compose down
 ```
 
-## To access the swagger local documentation, run the project, then:
+## Generate entity with Prisma
 
 ```
-$ http://localhost:5000/docs
+$ npx prisma generate
+```
+
+## Access DB Administrator with prisma
+
+```
+$ npx prisma studio
 ```
 
 ## To Test the request with postman, you can use the collection inside the root folder:
